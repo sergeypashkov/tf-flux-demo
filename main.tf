@@ -8,11 +8,11 @@ module "github_repository" {
 }
 
 module "kind_cluster" {
-  source = "github.com/den-vasyliev/tf-kind-cluster"
+  source = "github.com/sergeypashkov/tf-kind-cluster"
 }
 
 module "flux_bootstrap" {
-    source = "github.com/den-vasyliev/tf-fluxcd-flux-bootstrap"
+    source = "github.com/sergeypashkov/tf-fluxcd-flux-bootstrap"
     github_repository = "${var.GITHUB_OWNER}/${var.FLUX_GITHUB_REPO}"
     private_key = module.tls_private_key.private_key_pem
     config_path = module.kind_cluster.kubeconfig
