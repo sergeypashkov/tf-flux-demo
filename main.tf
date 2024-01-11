@@ -9,7 +9,7 @@ terraform {
 
 # GitHub infrastructure repository
 module "github_repository" {
-  source                   = "github.com/den-vasyliev/tf-github-repository"
+  source                   = "github.com/sergeypashkov/tf-github-repository"
   github_owner             = var.GITHUB_OWNER
   github_token             = var.GITHUB_TOKEN
   repository_name          = var.FLUX_GITHUB_REPO
